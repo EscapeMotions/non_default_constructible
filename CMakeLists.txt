@@ -11,7 +11,7 @@ add_library(non_default_constructible INTERFACE)
 target_include_directories(non_default_constructible INTERFACE "./include")
 
 # Test
-add_executable(tests test.cpp)
+add_executable(tests tests/test.cpp)
 
 # find_package(Catch2 3 REQUIRED PATHS "D:/SourceCode/Catch2/build64_install")
 Include(FetchContent)
@@ -44,7 +44,7 @@ function(add_compile_fail_test test_name source_file)
     # Mark the test as expected to fail
     set_tests_properties(${test_name} PROPERTIES WILL_FAIL TRUE)
 endfunction()
-add_compile_fail_test(compile_fail_test_1 test_fail_1.cpp)
+add_compile_fail_test(compile_fail_test_1 tests/test_fail_1.cpp)
 
 # Install
 install(FILES "./include/non_default_constructible.h" DESTINATION include)
