@@ -16,7 +16,7 @@ void f(const SomeArgs& args);
 f({.i=123, .s="hello"}); // callback is not initialized. Maybe the callback member was added to the struct later.
 ```
 
-If you want to force the caller of `f()` to always set `callback` and `s` explicitly, just wrap them in `NonDefaultConstructible` and compilation fails when the member isn't explicitly initialized:
+If you want to force the caller of `f()` to always set `callback` and `s` explicitly, just wrap them in `NonDefaultConstructible`:
 ```cpp
 #include "non_default_constructible.h"
 
