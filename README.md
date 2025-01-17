@@ -1,4 +1,4 @@
-![workflow](https://github.com/michalfapso/non_default_constructible/actions/workflows/cmake-multi-platform.yml/badge.svg)
+![workflow](https://github.com/EscapeMotions/non_default_constructible/actions/workflows/cmake-multi-platform.yml/badge.svg)
 
 A header-only c++ wrapper class for disabling a default constructor of any wrapped type. It's especially useful for initializing members of a struct via an initializer list when you want to make sure that a user of your struct properly initialized all its members.
 
